@@ -441,6 +441,7 @@ article.container::before {
   content: "";
   position: fixed;
   bottom: 0;
+  left: 0;
   width: 100%;
   height: 40px;
   background-image: var(--gradient-1);
@@ -601,23 +602,37 @@ article.container::before {
   #FORECAST
 \*-----------------------------------*/
 
+.slider-container {
+  overflow-x: auto;
+  margin-inline: -16px;
+}
 
+.slider-container::-webkit-scrollbar { display: none; }
 
+.slider-list {
+  display: flex;
+  gap: 12px;
+}
 
+.slider-list:first-child { margin-block-end: 16px; }
 
-/*-----------------------------------*\
-  #LOADING
-\*-----------------------------------*/
+.slider-list::before,
+.slider-list::after {
+  content: "";
+  min-width: 4px;
+}
 
+.slider-item {
+  min-width: 110px;
+  flex: 1 1 100%;
+}
 
+.slider-card { text-align: center; }
 
-
-
-/*-----------------------------------*\
-  #ERROR SECTION
-\*-----------------------------------*/
-
-
+.slider-item .weather-icon {
+  margin-inline: auto;
+  margin-block: 12px;
+}
 
 
 
@@ -626,9 +641,119 @@ article.container::before {
 \*-----------------------------------*/
 
 
+.footer,
+.footer .body-3:last-child {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.footer {
+  color: var(--on-surface-variant);
+  text-align: center;
+  gap: 12px 24px;
+  margin-block-start: 28px;
+  display: none;
+}
+
+.fade-in .footer { display: flex; }
+
+.footer .body-3:last-child { gap: 6px; }
+
+
+/*-----------------------------------*\
+  #LOADING
+\*-----------------------------------*/
+
+.loading {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--background);
+  place-items: center;
+  z-index: 1;
+  display: none;
+}
+
+.loading::before {
+  content: "";
+  width: 48px;
+  height: 48px;
+  border: 4px solid var(--on-background);
+  border-block-start-color: transparent;
+  border-radius: var(--radius-circle);
+  animation: loading 500ms linear infinite;
+}
+
+
+
+/*-----------------------------------*\
+  #ERROR SECTION
+\*-----------------------------------*/
+
+.error-content {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  height: 100svh;
+  background-color: var(--background);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: none;
+  z-index: 8;
+}
+
+.error-content .btn-primary { margin-block-start: 20ox; }
 
 
 
 /*-----------------------------------*\
   #MEDIA QUERIES
 \*-----------------------------------*/
+
+/*
+  responsive design
+  larger than 768px screen
+*/
+
+@media (min-width: 768px) {
+  /*
+    REUSED STYLE
+  */
+
+  .container { padding: 24px; }
+
+  .title-1 { --title-1: 2.4rem; }
+
+  .section > .title-2 { margin-block-end: 16px; }
+
+  .card-lg { padding: 24px; }
+
+  .card-sm {
+    padding: 20px;
+    display: grid;
+    grid-template-rows: min-content 1fr;
+  }
+
+  .badge {
+    top: 20px;
+    right: 20px;
+  }
+
+
+  /* 
+    HEADER
+  */
+
+
+  
+
+}
