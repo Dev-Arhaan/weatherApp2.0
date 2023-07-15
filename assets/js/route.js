@@ -1,47 +1,49 @@
 /*
  * @license MIT
- * @fileoverview Menage all routes
+ * @fileoverview All api related stuff like api_key, api request etc.
  * @copyright codewithsadee 2023 All rights reserved
- * @author codewithsadee <mohammadsadee24@gmail.com>
+ * 
  */
 
 'use strict';
 
-const api_key = "0fd9e33a1ca9b5b30250fd637c6ab61b";
+import { updateWeather, error404 } from "./app.js";
+const defaultLocation = "#/weather?lat=28.7041&lon=77.1025" // Delhi
+
+const currentLocation = function() {
+    window.navigator.geolocation.getCurrentPosition( res => {
+        const { latitude, longitude } = res.coords;
+
+        updateWeather(`lat=${latitude}`, `lon=${longitude}`);
+    }, err => {
+        window.location.hash = defaultLocation;
+    });
+}
 
 /**
- * Fetch data from server
- * @param {string} URL API url 
- * @param {Function} callback callback function 
+ * @param {string} query searched query
  */
+const searchedLocation = query => updateWeather(...query.split("&"));
+// updateWeather("lat=28.7041", "lon=77.1025") 
 
-export const fetchData = function(URL, callback) {
-    fetch(`${URL}&appid=${api_key}`)
-    .then(res => res.json())
-    .then(data => callback(data));
+const routes = new Map([
+    ["/current-location", currentLocation],
+    ["/weather", searchedLocation]
+]);
+
+const checkHash = function () {
+    const requestURL = Window.location.hash.slice(1);
+
+    const [route, query] = requestURL.includes ? requestURL.split("?") : [requestURL];
+    routes.get(route) ? routes.get(route)(query) : error404();
 }
 
-export const url = {
-    currentWeather(lat, lon) {
-        return `https://api.openweathermap.org/data/2.5/weather?${lat}&${lon}&units=metric`
-    },
-    
-    forecast(lat, lon) {
-        return `https://api.openweathermap.org/data/2.5/forecast?${lat}&${lon}&units=metric`
-    },
+window.addEventListener("hashchange", checkHash);
 
-    airPollution(lat, lon) {
-        return `http://api.openweathermap.org/data/2.5/air_pollution?${lat}&${lon}`
-    },
-
-    reverseGeo(lat, lon) {
-        return `http://api.openweathermap.org/geo/1.0/reverse?${lat}&${lon}&limit=5`
-    },
-    
-    /**
-     * @param {stirng} query Search query for e.g: "London", "Bengaluru"
-     */
-    geo(query) {
-        return `http://api.openweathermap.org/geo/1.0/direct?q=${query}&limit=5`
+window.addEventListener("load", function (){
+    if (!window.location.hash) {
+        window.location.hash = "/current-location";
+    } else {
+        checkHash();
     }
-}
+})

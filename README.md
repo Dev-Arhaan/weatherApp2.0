@@ -12,8 +12,8 @@ Insert gif or link to demo
 
 ## Features
 
-- Feature 1
-- Feature 2
+- Air pollution Detection
+- 5 Day Forecast
 - Feature 3
 
 ## Screenshots
