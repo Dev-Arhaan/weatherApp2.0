@@ -6,10 +6,6 @@ A brief description of what this project does and who it's for
 
 **Client:** HTML, CSS, JavaScript, API
 
-## Demo
-
-Insert gif or link to demo
-
 ## Features
 
 - Air pollution Detection
@@ -18,7 +14,13 @@ Insert gif or link to demo
 
 ## Screenshots
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![Screenshot (97)](https://github.com/Dev-Arhaan/weatherApp2.0/assets/113898488/ccbbdbc7-ccc5-46e2-a08c-3532dfd86d29)
+
+
+
+![Screenshot (98)](https://github.com/Dev-Arhaan/weatherApp2.0/assets/113898488/a1309607-5f7e-418a-8d8a-cd6514addad1)
+
+
 
 ## Run Locally
 
