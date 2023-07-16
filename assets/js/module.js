@@ -83,7 +83,7 @@ export const getHours = function(timeUnix, timezone) {
  */
 export const mps_to_kmh = mps => {
     const mph = mps * 3600;
-    return mps / 1000;
+    return mph / 1000;
 }
 
 export const aqiText = {

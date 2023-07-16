@@ -344,7 +344,7 @@ export const updateWeather = function (lat, lon) {
                 dt: dateTimeUnix,
                 main: { temp },
                 weather,
-                wind: { deg: windDirection, speed: windSpeed }
+                wind: { speed: windSpeed, deg: windDirection }
               } = data
               const [{ icon, description }] = weather
       
