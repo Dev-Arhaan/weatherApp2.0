@@ -32,9 +32,10 @@ const routes = new Map([
 ]);
 
 const checkHash = function () {
-    const requestURL = Window.location.hash.slice(1);
+    const requestURL = window.location.hash.slice(1);
 
     const [route, query] = requestURL.includes ? requestURL.split("?") : [requestURL];
+
     routes.get(route) ? routes.get(route)(query) : error404();
 }
 
@@ -42,8 +43,8 @@ window.addEventListener("hashchange", checkHash);
 
 window.addEventListener("load", function (){
     if (!window.location.hash) {
-        window.location.hash = "/current-location";
+        window.location.hash = "#/current-location";
     } else {
         checkHash();
     }
-})
+});
