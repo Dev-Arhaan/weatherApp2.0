@@ -1,6 +1,12 @@
 # weatherApp2.0
 
-A brief description of what this project does and who it's for
+🌤️ Excited to share my second web app! 🌦️ <br>
+
+I've built a sleek and user-friendly website that connects to the OpenWeatherMap API, providing real-time weather information with just a few clicks. 🌍⛅ <br>
+
+Now you can easily check the visibility, temperature, humidity, wind speed and direction, and even get a 24-hour forecast or a glimpse of the next 5 days' weather conditions, all in one place! 🌬️🌡️💧 <br>
+
+Check out my app and stay informed about the weather wherever you are! ☀️🌧️❄️ <br>
 
 ## Tech Stack
 
@@ -8,42 +14,13 @@ A brief description of what this project does and who it's for
 
 ## Features
 
-- Air pollution Detection
+- AQI rating
 - 5 Day Forecast
-- Feature 3
+- 24 Hour updates
 
 ## Screenshots
 
-![Screenshot (97)](https://github.com/Dev-Arhaan/weatherApp2.0/assets/113898488/ccbbdbc7-ccc5-46e2-a08c-3532dfd86d29)
-
+![Screenshot (99)](https://github.com/Dev-Arhaan/weatherApp2.0/assets/113898488/9ec2623c-1b30-435a-a43f-d2af920bd7da)
 
 
 ![Screenshot (98)](https://github.com/Dev-Arhaan/weatherApp2.0/assets/113898488/a1309607-5f7e-418a-8d8a-cd6514addad1)
-
-
-
-## Run Locally
-
-Clone the project
-
-```bash
-  git clone https://link-to-project
-```
-
-Go to the project directory
-
-```bash
-  cd my-project
-```
-
-Open with VSCode
-
-```bash
-  code .
-```
-
-Open with live server
-
-```bash
-  npm run start
-```
