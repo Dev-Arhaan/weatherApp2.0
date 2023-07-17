@@ -2,9 +2,9 @@
   "name": "weatherapp2.0",
   "version": "1.0.0",
   "description": "🌤️ Excited to share my second web app! 🌦️",
-  "main": "index.html",
+  "main": "app.js",
   "scripts": {
-    "start": "node index.html"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "Dev-Arhaan",
