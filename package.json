@@ -1,0 +1,12 @@
+{
+  "name": "weatherapp2.0",
+  "version": "1.0.0",
+  "description": "🌤️ Excited to share my second web app! 🌦️",
+  "main": "index.html",
+  "scripts": {
+    "start": "node index.html"
+  },
+  "keywords": [],
+  "author": "Dev-Arhaan",
+  "license": "ISC"
+}
