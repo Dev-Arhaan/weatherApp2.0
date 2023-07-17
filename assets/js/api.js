@@ -1,10 +1,3 @@
-/*
- * @license MIT
- * @fileoverview Menage all routes
- * @copyright codewithsadee 2023 All rights reserved
- * 
- */
-
 'use strict';
 
 const api_key = "0fd9e33a1ca9b5b30250fd637c6ab61b";

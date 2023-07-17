@@ -1,14 +1,7 @@
-/*
- * @license MIT
- * @fileoverview All api related stuff like api_key, api request etc.
- * @copyright codewithsadee 2023 All rights reserved
- * 
- */
-
 'use strict';
 
 import { updateWeather, error404 } from "./app.js";
-const defaultLocation = "#/weather?lat=28.7041&lon=77.1025" // Delhi
+const defaultLocation = "#/weather?lat=28.6139&lon=77.2090" // Delhi
 
 const currentLocation = function() {
     window.navigator.geolocation.getCurrentPosition( res => {

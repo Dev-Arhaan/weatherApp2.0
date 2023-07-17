@@ -1,8 +1,3 @@
-/*
- * @license MIT
- * @copyright codewithsadee 2023 All rights reserved
- */
-
 'use strict';
 
 import { fetchData, url } from "./api.js";

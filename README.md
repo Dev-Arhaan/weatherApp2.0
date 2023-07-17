@@ -1,4 +1,4 @@
-# weatherApp2.0
+# weatherApp - weatherio
 
 A brief description of what this project does and who it's for
 
@@ -27,7 +27,7 @@ A brief description of what this project does and who it's for
 Clone the project
 
 ```bash
-  git clone https://link-to-project
+  git clone [https://link-to-project](https://github.com/Dev-Arhaan/weatherApp2.0.git)
 ```
 
 Go to the project directory
