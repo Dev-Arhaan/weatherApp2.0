@@ -10,7 +10,7 @@ Check out my app and stay informed about the weather wherever you are! ☀️�
 
 ## Tech Stack
 
-**Client:** HTML, CSS, JavaScript, API
+**Client:** HTML, CSS, JavaScript, OpenWeatherMap API
 
 ## Features
 
