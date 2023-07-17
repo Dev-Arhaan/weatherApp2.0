@@ -32,7 +32,7 @@ Check out my app and stay informed about the weather wherever you are! ☀️�
 Clone the project
 
 ```bash
-  git clone https://link-to-project
+  git clone [https://link-to-project](https://github.com/Dev-Arhaan/weatherApp2.0.git)
 ```
 
 Go to the project directory
