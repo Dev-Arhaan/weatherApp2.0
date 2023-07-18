@@ -12,6 +12,10 @@ Check out my app and stay informed about the weather wherever you are! ☀️�
 
 **Client:** HTML, CSS, JavaScript, OpenWeatherMap API
 
+## Demo
+
+![weatherio - Google Chrome 2023-07-18 06-35-12](https://github.com/Dev-Arhaan/weatherApp2.0/assets/113898488/584b1687-de1d-4d86-8a06-9f98e8845fb3)
+
 ## Features
 
 - AQI rating
