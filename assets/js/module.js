@@ -44,12 +44,23 @@ export const getDate = function(dateUnix, timezone) {
  * 
  * @param {number} timeUnix Unix date in seconds
  * @param {number} timezone Timezone shift from UTC in seconds 
+ * @param {Function} addZero Adds zzero in front of single digit minutes
  * @returns {String} Time String. format: "HH:MM AM/PM"
  */
+
+function addZero(i) {
+    if (i < 10) {
+        i = "0" + i;
+    }
+
+    return i;
+  }
+
+  
 export const getTime = function(timeUnix, timezone) {
     const date = new Date((timeUnix + timezone) * 1000);
     const hours = date.getUTCHours();
-    const minutes = date.getUTCMinutes();
+    const minutes = addZero(date.getUTCMinutes());
     const period = hours >= 12 ? "PM" : "AM";
 
     return `${hours % 12 || 12}:${minutes} ${period}`;
